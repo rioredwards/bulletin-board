@@ -1,12 +1,11 @@
 /* Imports */
 import '../auth/user.js';
+import { createPost } from '../fetch-utils.js';
 
 /* Get DOM Elements */
 const postForm = document.getElementById('post-form');
 const errorDisplay = document.getElementById('error');
 const addBtn = document.getElementById('add-post');
-
-console.log(postForm, errorDisplay, addBtn);
 
 /* State */
 let error = null;
@@ -24,9 +23,8 @@ postForm.addEventListener('submit', async (e) => {
         category: formData.get('category'),
         contact: formData.get('contact'),
     };
-    console.log(post);
 
-    const response = null; // TODO await createPost(post);
+    const response = await createPost(post);
     error = response.error;
     addBtn.disabled = false;
 
