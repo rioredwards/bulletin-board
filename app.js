@@ -5,6 +5,7 @@ import { getPosts } from './fetch-utils.js';
 import { renderPost } from './render-utils.js';
 
 /* Get DOM Elements */
+const searchForm = document.getElementById('search-form');
 const errorDisplay = document.getElementById('error');
 const postList = document.getElementById('post-list');
 
@@ -21,6 +22,23 @@ window.addEventListener('load', async () => {
     if (error) {
         displayError();
     } else {
+        displayPosts();
+    }
+});
+
+searchForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(searchForm);
+    const title = formData.get('title');
+
+    const response = await getPosts(title);
+    error = response.error;
+
+    if (error) {
+        displayError();
+    } else {
+        posts = response.data;
         displayPosts();
     }
 });

@@ -3,6 +3,33 @@
     padding: 0;
 }
 
+main {
+    display: grid;
+    grid-template-rows: 4rem auto auto;
+}
+
+#search-form {
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    gap: 1rem;
+}
+
+input,
+button {
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+    border: 2px solid rgba(138, 138, 138, 0.494);
+}
+
+input {
+    width: 15rem;
+}
+
+.error {
+    justify-self: center;
+}
+
 #post-list {
     display: grid;
     padding: 1rem 10%;

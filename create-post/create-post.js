@@ -31,7 +31,6 @@ postForm.addEventListener('submit', async (e) => {
     if (error) {
         displayError();
     } else {
-        console.log(`post created!`);
         location.assign('/');
     }
 });
