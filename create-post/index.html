@@ -12,7 +12,7 @@
 
         <!-- js -->
         <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-        <script type="module" src="app.js"></script>
+        <script type="module" src="./create-post.js"></script>
 
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,7 +43,7 @@
             <form id="post-form">
                 <label>
                     <div>Category</div>
-                    <select name="Category" id="category" required>
+                    <select name="category" id="category" required>
                         <option disabled selected>Choose a Category</option>
                         <option value="Free">🎁 Free</option>
                         <option value="Housing">🏠 Housing</option>
@@ -53,13 +53,13 @@
                 </label>
                 <label>
                     <div>Title</div>
-                    <input name="Title" required placeholder="Enter a title for your post" />
+                    <input name="title" required placeholder="Enter a title for your post" />
                 </label>
                 <label>
                     <div>Description</div>
 
                     <textarea
-                        name="Description"
+                        name="description"
                         required
                         placeholder="Enter a description for your post"
                     ></textarea>
@@ -68,8 +68,8 @@
                     <div>Contact</div>
                     <input name="contact" placeholder="how to get in touch..." />
                 </label>
-                <button>Add Post</button>
-                <p class="error"></p>
+                <button id="add-post">Add Post</button>
+                <p class="error" id="error"></p>
             </form>
         </main>
     </body>
