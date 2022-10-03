@@ -31,3 +31,8 @@ export async function signOutUser() {
 export async function createPost(post) {
     return await client.from('posts').insert(post).single();
 }
+
+export async function getPosts() {
+    let query = client.from('posts').select('*').limit(20);
+    return await query;
+}
