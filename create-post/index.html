@@ -31,11 +31,11 @@
 
     <body>
         <header class="page-header">
-            <img class="logo" src="/assets/html_css_js.png" alt="logo" />
+            <img class="logo" src="../assets/pencil.png" alt="logo" />
             <p class="title">Create Post</p>
             <nav>
                 <a href="/">Home</a>
-                <a id="sign-out-link" href="auth">Sign Out</a>
+                <a id="sign-out-link" href="../auth/index.html">Sign Out</a>
             </nav>
         </header>
 
@@ -57,13 +57,29 @@
                 </label>
                 <label>
                     <div>Description</div>
-
                     <textarea
                         name="description"
                         required
                         placeholder="Enter a description for your post"
                     ></textarea>
                 </label>
+                <label>
+                    <div>Photo</div>
+                    <input
+                        id="image-input"
+                        name="image"
+                        type="file"
+                        required
+                        placeholder="upload an image..."
+                    />
+                </label>
+                <img
+                    id="preview"
+                    class="preview"
+                    alt="avatar preview"
+                    src="../assets/image-gallery.png"
+                />
+
                 <label>
                     <div>Contact</div>
                     <input name="contact" placeholder="how to get in touch..." />
@@ -72,5 +88,6 @@
                 <p class="error" id="error"></p>
             </form>
         </main>
+        <footer></footer>
     </body>
 </html>

@@ -8,16 +8,25 @@ export function renderPost(post) {
     const span = document.createElement('span');
     span.textContent = getCategoryEmoji(post.category);
     span.classList.add('category');
-    h2.append(span);
+
+    li.append(h2, span);
+
+    if (post.image_url) {
+        const img = document.createElement('img');
+        img.classList.add('post-image');
+        img.src = post.image_url;
+        li.append(img);
+    }
 
     const pDescription = document.createElement('p');
     pDescription.classList.add('description');
     pDescription.textContent = post.description;
 
     const pContact = document.createElement('p');
+    pContact.classList.add('contact');
     pContact.textContent = post.contact;
 
-    li.append(h2, span, pDescription, pContact);
+    li.append(pDescription, pContact);
 
     return li;
 }
