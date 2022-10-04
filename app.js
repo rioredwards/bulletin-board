@@ -48,7 +48,7 @@ function displayError() {
     errorDisplay.textContent = error.message;
 }
 
-function displayPosts() {
+// function displayPosts() {
     postList.innerHTML = '';
     for (const post of posts) {
         const postEl = renderPost(post);
