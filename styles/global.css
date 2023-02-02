@@ -1,11 +1,11 @@
 :root {
-    --background: rgb(224, 234, 247);
+    --background: rgb(247, 238, 224);
     --header-background: white;
     --text-color: rgb(7, 5, 68);
-    --label-color: rgb(75, 102, 98);
+    --label-color: rgb(50, 86, 110);
     --placeholder-color: rgb(136, 136, 153);
-    --offset-color: rgb(217, 236, 217);
-    --action-color: rgb(77, 132, 252);
+    --offset-color: rgb(230, 201, 139);
+    --action-color: rgb(77, 159, 252);
 
     --primary-font: 'Rubik', Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans',
         'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
@@ -68,4 +68,9 @@ main {
 
 .hidden {
     display: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
 }
